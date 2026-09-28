@@ -17,7 +17,7 @@ To help teachers better understand learners' performance, I asked Codex to colle
 
 Open `index.html` in any modern browser. Use the Student and Teacher buttons in the top-right to switch views. No installation or server is required.
 
-## Selected Prompt
+## Selected Prompts
 
 1. “Can you create a small browser-based quiz where students answer questions and a teacher can see answering time and how many answers are correct?”
 
