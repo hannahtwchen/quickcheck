@@ -17,6 +17,16 @@ To help teachers better understand learners' performance, I asked Codex to colle
 
 Open `index.html` in any modern browser. Use the Student and Teacher buttons in the top-right to switch views. No installation or server is required.
 
+## Selected Prompt
+
+1. “Can you create a small browser-based quiz where students answer questions and a teacher can see answering time and how many answers are correct?”
+
+2. “I want the student and teacher experiences to be separate. Students should only see the questions, while teachers should be able to see response time and correct rate.”
+
+3. “I want it to be one website with two buttons in the top-right corner where I can switch between Student and Teacher identities whenever I want.”
+
+4. “The teacher dashboard should be available before the student answers questions and update as the student answers, rather than only appearing after the quiz is finished.”
+
 ## Reflection
 
 My intention was to create a small quiz that separates what students need to see from what teachers need to review. In the student view, a student can focus on answering one question at a time without seeing their score or how long they took. In the teacher view, I wanted to display the quiz data in a simple, clear way: the answer selected, whether it was correct, the accuracy rate, and the response time for each question.
