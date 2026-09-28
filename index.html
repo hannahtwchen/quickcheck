@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Check</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <section class="intro" aria-labelledby="page-title">
+          <p id="view-label" class="eyebrow">STUDENT CHECK-IN</p>
+          <h1 id="page-title">Quick Check</h1>
+          <p id="view-description">Answer three questions. Choose the response that you think is best.</p>
+        </section>
+        <div class="identity-switcher" role="group" aria-label="Switch identity">
+          <button class="identity-button active" data-view="student" type="button">Student</button>
+          <button class="identity-button" data-view="teacher" type="button">Teacher</button>
+        </div>
+      </header>
+
+      <section class="quiz-card" aria-live="polite">
+        <div class="quiz-meta">
+          <span id="question-count">Question 1 of 3</span>
+        </div>
+        <div id="question-area">
+          <h2 id="question-text"></h2>
+          <div id="answers" class="answers" role="group" aria-label="Answer choices"></div>
+        </div>
+        <div id="feedback" class="feedback" aria-live="assertive"></div>
+        <button id="next-button" class="next-button" type="button" hidden>Next question</button>
+      </section>
+
+      <section id="complete-panel" class="complete-panel" hidden aria-labelledby="complete-title">
+        <p class="eyebrow">ALL DONE</p>
+        <h2 id="complete-title">Your responses have been submitted.</h2>
+        <p>Your teacher can now review the results.</p>
+        <button id="restart-button" class="restart-button" type="button">Start a new attempt</button>
+      </section>
+
+      <section id="teacher-panel" class="results-panel" hidden aria-labelledby="results-title">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">LIVE DASHBOARD</p>
+            <h2 id="results-title">Student results</h2>
+          </div>
+          <p id="score-summary" class="score-summary">0 / 0 correct</p>
+        </div>
+        <p id="teacher-status" class="teacher-status">The student has not answered a question yet.</p>
+        <div class="stat-grid">
+          <article><span>Correct rate</span><strong id="correct-rate">—</strong></article>
+          <article><span>Average response time</span><strong id="average-time">—</strong></article>
+          <article><span>Total completion time</span><strong id="total-time">—</strong></article>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Question</th><th>Answer</th><th>Result</th><th>Time</th></tr></thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+        <button id="reset-button" class="restart-button" type="button">Reset quiz</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

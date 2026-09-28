@@ -1,0 +1,26 @@
+:root { --ink:#18324a; --muted:#5d6f7f; --paper:#f8f6ef; --blue:#146b8c; --aqua:#d9f0ed; --gold:#f7c85a; --correct:#197048; --wrong:#a63f40; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; color:var(--ink); font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:linear-gradient(135deg,#dceeed 0%,var(--paper) 48%,#fae6ae 100%); }
+.app-shell { width:min(880px,calc(100% - 32px)); margin:0 auto; padding:64px 0; }
+.page-header { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; }.intro { max-width:670px; margin-bottom:28px; }
+.identity-switcher { display:flex; flex:none; overflow:hidden; border:1px solid #bad0d1; border-radius:10px; background:white; }.identity-button { padding:9px 13px; border:0; color:var(--ink); font-weight:750; background:white; cursor:pointer; }.identity-button + .identity-button { border-left:1px solid #bad0d1; }.identity-button.active { color:white; background:var(--blue); }
+h1,h2,p { margin-top:0; }
+h1 { margin-bottom:8px; font-family:Georgia,serif; font-size:clamp(2.7rem,7vw,4.5rem); line-height:1; letter-spacing:-.05em; }
+h2 { font-size:clamp(1.45rem,3vw,2rem); line-height:1.2; }
+.eyebrow { margin-bottom:7px; color:var(--blue); font-size:.75rem; font-weight:800; letter-spacing:.13em; }
+.quiz-card,.results-panel { border:1px solid rgba(24,50,74,.12); border-radius:22px; background:rgba(255,255,255,.86); box-shadow:0 14px 38px rgba(24,50,74,.11); }
+.quiz-card { padding:clamp(24px,5vw,48px); }
+.quiz-meta,.results-heading { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; }
+.quiz-meta { margin-bottom:38px; color:var(--muted); font-size:.92rem; font-weight:700; }
+.answers { display:grid; gap:12px; margin-top:25px; }
+.answer-button { width:100%; padding:16px 18px; border:2px solid #d7e0df; border-radius:12px; color:var(--ink); text-align:left; font:inherit; font-weight:650; background:#fff; cursor:pointer; transition:.16s ease; }
+.answer-button:hover:not(:disabled),.answer-button:focus-visible { border-color:var(--blue); transform:translateY(-2px); outline:3px solid rgba(20,107,140,.18); }
+.answer-button:disabled { cursor:default; }
+.answer-button.correct { border-color:var(--correct); background:#e5f5ec; }
+.answer-button.incorrect { border-color:var(--wrong); background:#fae9e8; }
+.feedback { min-height:26px; margin-top:22px; font-weight:750; }
+.feedback.correct { color:var(--correct); }.feedback.incorrect { color:var(--wrong); }
+button { font:inherit; }.next-button,.restart-button { margin-top:12px; padding:12px 18px; border:0; border-radius:10px; color:white; font-weight:750; background:var(--blue); cursor:pointer; }.next-button:hover,.restart-button:hover { filter:brightness(.9); }
+.results-panel,.complete-panel,.empty-state { margin-top:26px; padding:clamp(24px,5vw,42px); border:1px solid rgba(24,50,74,.12); border-radius:22px; background:rgba(255,255,255,.86); box-shadow:0 14px 38px rgba(24,50,74,.11); }.score-summary { margin:0; padding:8px 12px; border-radius:9px; background:var(--gold); color:#433000; font-weight:800; white-space:nowrap; }.teacher-status { color:var(--muted); }.stat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:25px 0 8px; }.stat-grid article { padding:15px; border-radius:12px; background:var(--aqua); }.stat-grid span { display:block; color:var(--muted); font-size:.82rem; font-weight:700; }.stat-grid strong { display:block; margin-top:4px; font-size:1.35rem; }.clear-button { margin-top:20px; padding:10px 14px; border:1px solid var(--blue); border-radius:10px; color:var(--blue); font-weight:750; background:transparent; cursor:pointer; }
+.table-wrap { overflow-x:auto; }table { width:100%; margin-top:20px; border-collapse:collapse; text-align:left; }th,td { padding:13px 10px; border-bottom:1px solid #dce4e2; }th { color:var(--muted); font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; }.result-correct { color:var(--correct); font-weight:800; }.result-incorrect { color:var(--wrong); font-weight:800; }
+@media (max-width:540px) { .app-shell{padding:38px 0}.page-header,.quiz-meta,.results-heading{flex-direction:column}.quiz-meta{gap:8px}.stat-grid{grid-template-columns:1fr} }
